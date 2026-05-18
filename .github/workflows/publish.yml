@@ -1,0 +1,53 @@
+name: Publish to npm
+
+on:
+  push:
+    branches: [main, dev]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      # main：发布正式版（dist-tag = latest）。
+      # 当前 package.json 版本若已存在于 npm 则跳过，避免重复发布报错。
+      - name: Publish release (main)
+        if: github.ref == 'refs/heads/main'
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          if npm view "mcui-oreui@$VERSION" version > /dev/null 2>&1; then
+            echo "mcui-oreui@$VERSION 已存在于 npm，跳过发布。请先 bump 版本号。"
+          else
+            npm publish --access public
+          fi
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      # dev：发布预发布测试版（dist-tag = next）。
+      # 版本号在 base 上附加 -dev.<run_number>，每次推送产出唯一可安装版本。
+      - name: Publish prerelease (dev)
+        if: github.ref == 'refs/heads/dev'
+        run: |
+          BASE=$(node -p "require('./package.json').version")
+          PRE="${BASE%%-*}-dev.${{ github.run_number }}"
+          echo "发布测试版 mcui-oreui@$PRE (tag: next)"
+          npm version "$PRE" --no-git-tag-version
+          npm publish --tag next --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
