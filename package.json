@@ -2,8 +2,34 @@
   "name": "mcui-oreui",
   "version": "1.0.0",
   "description": "Minecraft 基岩版 Ore UI 设计语言的 Vue 3 组件库（第三方复刻，移植自 Spectrollay-OreUI）",
-  "type": "module",
+  "keywords": [
+    "minecraft",
+    "ore-ui",
+    "oreui",
+    "bedrock",
+    "vue",
+    "vue3",
+    "vue-component",
+    "component-library",
+    "ui",
+    "ui-kit",
+    "pixel",
+    "minecraft-ui"
+  ],
   "license": "MIT",
+  "author": "ShenYuanOL <kiyanah_seaman416@mail.com> (https://github.com/ShenYuanOL)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShenYuanOL/mcui-oreui.git"
+  },
+  "homepage": "https://github.com/ShenYuanOL/mcui-oreui#readme",
+  "bugs": {
+    "url": "https://github.com/ShenYuanOL/mcui-oreui/issues"
+  },
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
   "files": ["dist"],
   "main": "./dist/mcui-oreui.umd.cjs",
   "module": "./dist/mcui-oreui.js",
@@ -20,7 +46,8 @@
     "build": "vue-tsc -p tsconfig.build.json && vite build",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "vue": "^3.3.0"
