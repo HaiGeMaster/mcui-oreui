@@ -1,0 +1,38 @@
+{
+  "name": "oreui-vue",
+  "version": "1.0.0",
+  "description": "Minecraft 基岩版 Ore UI 设计语言的 Vue 3 组件库（第三方复刻，移植自 Spectrollay-OreUI）",
+  "type": "module",
+  "license": "MIT",
+  "files": ["dist"],
+  "main": "./dist/oreui-vue.umd.cjs",
+  "module": "./dist/oreui-vue.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/oreui-vue.js",
+      "require": "./dist/oreui-vue.umd.cjs"
+    },
+    "./style.css": "./dist/oreui-vue.css"
+  },
+  "scripts": {
+    "build": "vue-tsc -p tsconfig.build.json && vite build",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "typescript": "^5.4.5",
+    "vite": "^5.3.1",
+    "vite-plugin-dts": "^3.9.1",
+    "vitepress": "^1.2.3",
+    "vue": "^3.4.31",
+    "vue-tsc": "^2.0.24"
+  }
+}
