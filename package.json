@@ -20,11 +20,11 @@
   "author": "ShenYuanOL (https://github.com/ShenYuanOL)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ShenYuanOL/mcui-oreui.git"
+    "url": "git+https://github.com/ShenYuanOR/mcui-oreui.git"
   },
-  "homepage": "https://github.com/ShenYuanOL/mcui-oreui#readme",
+  "homepage": "https://github.com/ShenYuanOR/mcui-oreui#readme",
   "bugs": {
-    "url": "https://github.com/ShenYuanOL/mcui-oreui/issues"
+    "url": "https://github.com/ShenYuanOR/mcui-oreui/issues"
   },
   "type": "module",
   "sideEffects": [
