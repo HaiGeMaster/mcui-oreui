@@ -51,6 +51,7 @@ function select(item: McButtonTabItem) {
           :class="{
             'normal_btn': item.value !== activeValue,
             'mc-button-tabs__tab--active': item.value === activeValue,
+            'disabled_btn': item.disabled,
           }"
           :disabled="item.disabled"
           type="button"

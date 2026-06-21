@@ -24,8 +24,8 @@ const switchStates = reactive({
     subtitle="快捷操作"
     :items="[
       { label: '打开存档', value: 'open' },
-      { label: '新建世界', value: 'new', icon: 'plus' },
-      { label: '导入地图', value: 'import', icon: 'download' },
+      { label: '新建世界', value: 'new', icon: 'mc-plus' },
+      { label: '导入地图', value: 'import', icon: 'mc-download' },
     ]"
     @change="(v) => console.log('点击了', v)"
   />
@@ -39,10 +39,10 @@ const switchStates = reactive({
   subtitle="快捷操作"
   :items="[
     { label: '打开存档', value: 'open' },
-    { label: '新建世界', value: 'new', icon: 'plus' },
-    { label: '导入地图', value: 'import', icon: 'download' },
-  ]"
-  @change="(v) => console.log('点击了', v)"
+  { label: '新建世界', value: 'new', icon: 'mc-plus' },
+  { label: '导入地图', value: 'import', icon: 'mc-download' },
+]"
+@change="(v) => console.log('点击了', v)"
 />
 ```
 
@@ -171,9 +171,9 @@ const switchStates = reactive({
     v-model="selected"
     mode="single"
     :items="[
-      { label: '生存模式', value: 'survival', icon: 'sword' },
-      { label: '创造模式', value: 'creative', icon: 'pickaxe' },
-      { label: '设置', value: 'settings', iconRight: 'gear' },
+      { label: '生存模式', value: 'survival', icon: 'mc-heart-outline' },
+      { label: '创造模式', value: 'creative', icon: 'mc-cube' },
+      { label: '设置', value: 'settings', iconRight: 'mc-settings' },
     ]"
   />
 </div>
@@ -183,9 +183,9 @@ const switchStates = reactive({
   v-model="selected"
   mode="single"
   :items="[
-    { label: '生存模式', value: 'survival', icon: 'sword' },
-    { label: '创造模式', value: 'creative', icon: 'pickaxe' },
-    { label: '设置', value: 'settings', iconRight: 'gear' },
+    { label: '生存模式', value: 'survival', icon: 'mc-heart-outline' },
+    { label: '创造模式', value: 'creative', icon: 'mc-cube' },
+    { label: '设置', value: 'settings', iconRight: 'mc-settings' },
   ]"
 />
 ```

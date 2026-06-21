@@ -74,6 +74,7 @@ body::-webkit-scrollbar-corner,
   overflow: visible !important;
   background-color: #48494a;
   border: 2px solid #1e1e1f;
+  color: #ffffff;
   padding: 20px 24px;
   margin: 18px 0;
   display: flex;

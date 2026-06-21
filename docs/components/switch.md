@@ -26,12 +26,32 @@ const enabled = ref(true)
 </template>
 ```
 
+## 自定义图标
+
+通过 `onIcon` 和 `offIcon` 属性可自定义开关两侧的内嵌图标，传入 SVG/图片 URL 路径。不传则使用默认点状图标。
+
+<div class="mc-demo">
+  <mc-switch v-model="on" on-icon="/mcui-oreui/eye.svg" off-icon="/mcui-oreui/locked.svg" />
+  <mc-switch v-model="off" on-icon="/mcui-oreui/eye.svg" off-icon="/mcui-oreui/locked.svg" />
+  <span style="color:#fff">on = {{ on }}</span>
+</div>
+
+```vue
+<mc-switch
+  v-model="enabled"
+  on-icon="/mcui-oreui/eye.svg"
+  off-icon="/mcui-oreui/locked.svg"
+/>
+```
+
 ## Props
 
 | 名称 | 类型 | 默认 | 说明 |
 |---|---|---|---|
 | `modelValue` | `boolean` | `false` | 开关状态（v-model） |
 | `disabled` | `boolean` | `false` | 是否禁用 |
+| `onIcon` | `string` | `''` | 自定义开启侧图标 URL；置空使用默认 |
+| `offIcon` | `string` | `''` | 自定义关闭侧图标 URL；置空使用默认 |
 
 ## Events
 
