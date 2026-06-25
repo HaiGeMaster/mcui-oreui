@@ -10,9 +10,16 @@ const props = withDefaults(
     modelValue?: boolean
     /** 是否禁用 */
     disabled?: boolean
+    /** 自定义开启侧图标（SVG/图片 URL），置空使用默认 */
+    onIcon?: string
+    /** 自定义关闭侧图标（SVG/图片 URL），置空使用默认 */
+    offIcon?: string
   }>(),
-  { modelValue: false, disabled: false },
+  { modelValue: false, disabled: false, onIcon: '', offIcon: '' },
 )
+
+const onSrc = computed(() => props.onIcon || switchOnIcon)
+const offSrc = computed(() => props.offIcon || switchOffIcon)
 
 const emit = defineEmits<{
   (e: 'update:modelValue', v: boolean): void
@@ -78,8 +85,8 @@ function onClick() {
       @pointermove="onPointerMove"
       @pointerup="onPointerUp"
     >
-      <div class="switch_style left"><img :src="switchOnIcon" alt="" /></div>
-      <div class="switch_style right"><img :src="switchOffIcon" alt="" /></div>
+      <div class="switch_style left"><img :src="onSrc" alt="" /></div>
+      <div class="switch_style right"><img :src="offSrc" alt="" /></div>
       <div class="switch_slider can_click" :class="bounceClass"></div>
     </div>
   </div>

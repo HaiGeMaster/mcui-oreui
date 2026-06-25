@@ -10,6 +10,7 @@ import McSlider from './components/McSlider.vue';
 import McCard from './components/McCard.vue';
 import McLayout from './components/McLayout.vue';
 import McHeader from './components/McHeader.vue';
+import McAppbar from './components/McAppbar.vue';
 import McScrollView from './components/McScrollView.vue';
 import McModal from './components/McModal.vue';
 import McLoadingMask from './components/McLoadingMask.vue';
@@ -19,6 +20,8 @@ import McProgress from './components/McProgress.vue';
 import McRadio from './components/McRadio.vue';
 import McRadioGroup from './components/McRadioGroup.vue';
 import McTabs from './components/McTabs.vue';
+import McButtonTabs from './components/McButtonTabs.vue';
+import McList from './components/McList.vue';
 import McPanel from './components/McPanel.vue';
 import McFormField from './components/McFormField.vue';
 import McConfirm from './components/McConfirm.vue';
@@ -38,6 +41,7 @@ export {
   McCard as McCard,
   McLayout as McLayout,
   McHeader as McHeader,
+  McAppbar,
   McScrollView as McScrollView,
   McModal as McModal,
   McLoadingMask as McLoadingMask,
@@ -47,6 +51,8 @@ export {
   McRadio as McRadio,
   McRadioGroup as McRadioGroup,
   McTabs as McTabs,
+  McButtonTabs,
+  McList,
   McPanel as McPanel,
   McFormField as McFormField,
   McConfirm as McConfirm,
@@ -60,6 +66,8 @@ export {
 export type { McRadioValue } from './components/McRadio.vue';
 export type { McRadioOption } from './components/McRadioGroup.vue';
 export type { McTabItem, McTabValue } from './components/McTabs.vue';
+export type { McButtonTabItem } from './components/McButtonTabs.vue';
+export type { McListItem, McListValue } from './components/McList.vue';
 export {
   MC_FORMAT_CODE_COLORS,
   MC_FORMAT_CODE_STYLES,
@@ -102,6 +110,7 @@ const components = {
   'mc-card': McCard,
   'mc-layout': McLayout,
   'mc-header': McHeader,
+  'mc-appbar': McAppbar,
   'mc-scroll-view': McScrollView,
   'mc-modal': McModal,
   'mc-loading-mask': McLoadingMask,
@@ -111,6 +120,8 @@ const components = {
   'mc-radio': McRadio,
   'mc-radio-group': McRadioGroup,
   'mc-tabs': McTabs,
+  'mc-button-tabs': McButtonTabs,
+  'mc-list': McList,
   'mc-panel': McPanel,
   'mc-form-field': McFormField,
   'mc-confirm': McConfirm,
