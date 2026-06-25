@@ -12,6 +12,7 @@ docs/.vitepress/cache/
 *.log
 npm-debug.log*
 .eslintcache
+.codex/
 
 # 系统/编辑器
 .DS_Store
@@ -20,5 +21,7 @@ Thumbs.db
 .vscode/*
 !.vscode/extensions.json
 
-# 本地私有：项目运维/发布注意事项（含 token 名等，禁止上传网络）
+# 本地私有 / AI 协作文件（含 token 名等，禁止上传网络）
 CLAUDE.md
+AGENTS.md
+SESSION_STATE.md
