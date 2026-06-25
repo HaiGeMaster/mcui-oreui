@@ -25,6 +25,9 @@ export default defineConfig({
     },
   },
   themeConfig: {
+    search: {
+      provider: 'local',
+    },
     nav: [
       { text: '文档', link: '/guide/getting-started' },
       { text: '设计 Token', link: '/guide/design-tokens' },
@@ -36,6 +39,7 @@ export default defineConfig({
         text: '指南',
         items: [
           { text: '快速开始', link: '/guide/getting-started' },
+          { text: '音效（useSound）', link: '/guide/useSound' },
           { text: '设计 Token', link: '/guide/design-tokens' },
           { text: '与 OreUI 的区别', link: '/guide/about' },
         ],
@@ -63,6 +67,7 @@ export default defineConfig({
           { text: 'Panel 面板', link: '/components/panel' },
           { text: 'Tooltip 提示', link: '/components/tooltip' },
           { text: 'Progress 进度条', link: '/components/progress' },
+          { text: 'Spinner 加载动画', link: '/components/spinner' },
           { text: 'SkinViewer 皮肤展示', link: '/components/skinviewer' },
         ],
       },
