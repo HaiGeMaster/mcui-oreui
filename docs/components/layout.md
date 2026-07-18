@@ -85,6 +85,37 @@ const drawerOpen = ref(false)
     </mc-list>
   </mc-drawer>
 </template>
+
+<style scoped>
+.mc-layout-demo {
+  background: #242526;
+  border: 2px solid #1e1e1f;
+  height: 360px;
+  margin: 18px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.mc-layout-demo :deep(dispaly-area) {
+  height: 100%;
+}
+
+.mc-layout-demo__content {
+  box-sizing: border-box;
+  color: #fff;
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  height: 600px;
+}
+
+.mc-layout-demo__content p {
+  color: #d0d1d4;
+  font-family: 'NotoSans Bold', sans-serif;
+  margin: 0 0 8px;
+}
+</style>
+
 ```
 
 文档站中的预览使用固定高度容器模拟全屏布局；实际项目中 `<mc-layout>` 适合作为页面根节点。
