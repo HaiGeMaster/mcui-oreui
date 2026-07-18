@@ -11,6 +11,8 @@ import McCard from './components/McCard.vue';
 import McLayout from './components/McLayout.vue';
 import McHeader from './components/McHeader.vue';
 import McAppbar from './components/McAppbar.vue';
+import McAppbarButton from './components/McAppbarButton.vue';
+import McAppbarIcon from './components/McAppbarIcon.vue';
 import McScrollView from './components/McScrollView.vue';
 import McModal from './components/McModal.vue';
 import McLoadingMask from './components/McLoadingMask.vue';
@@ -44,6 +46,8 @@ export {
   McLayout as McLayout,
   McHeader as McHeader,
   McAppbar,
+  McAppbarButton,
+  McAppbarIcon,
   McScrollView as McScrollView,
   McModal as McModal,
   McLoadingMask as McLoadingMask,
@@ -115,6 +119,8 @@ const components = {
   'mc-layout': McLayout,
   'mc-header': McHeader,
   'mc-appbar': McAppbar,
+  'mc-appbar-button': McAppbarButton,
+  'mc-appbar-icon': McAppbarIcon,
   'mc-scroll-view': McScrollView,
   'mc-modal': McModal,
   'mc-loading-mask': McLoadingMask,
